@@ -19,15 +19,16 @@ REGISTERED_DATASET_CLASSES = {}
 
 def register_dataset(cls, name=None):
     global REGISTERED_DATASET_CLASSES
-    print("name:",name,"cls.name:",cls.__name__)
     if name is None:
         name = cls.__name__
+    print("name:",name,"cls.name:",cls.__name__)
     assert name not in REGISTERED_DATASET_CLASSES, f"exist class: {REGISTERED_DATASET_CLASSES}"
     REGISTERED_DATASET_CLASSES[name] = cls
     return cls
 
 
 def get_model_class(name):
+    print("get_model_class: ",name)
     global REGISTERED_DATASET_CLASSES
     assert name in REGISTERED_DATASET_CLASSES, f"available class: {REGISTERED_DATASET_CLASSES}"
     return REGISTERED_DATASET_CLASSES[name]

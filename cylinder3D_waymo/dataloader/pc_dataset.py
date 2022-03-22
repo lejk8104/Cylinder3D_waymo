@@ -21,6 +21,7 @@ def register_dataset(cls, name=None):
 
 
 def get_pc_model_class(name):
+    print("get_pc_model_class:", name)
     global REGISTERED_PC_DATASET_CLASSES
     assert name in REGISTERED_PC_DATASET_CLASSES, f"available class: {REGISTERED_PC_DATASET_CLASSES}"
     return REGISTERED_PC_DATASET_CLASSES[name]
