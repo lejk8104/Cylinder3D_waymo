@@ -1,7 +1,6 @@
 # -*- coding:utf-8 -*-
 # author: Xinge
-# @file: from . import dataset_waymo
-.py
+# @file: from . import dataset_waymo.py
 
 import numpy as np
 import torch
