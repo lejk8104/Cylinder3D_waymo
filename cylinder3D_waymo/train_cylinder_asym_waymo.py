@@ -129,6 +129,13 @@ def main(args):
             point_label_tensor = train_vox_label.type(torch.LongTensor).to(pytorch_device)
 
             # forward + backward + optimize
+            print("train_pt_fea_ten: ", train_pt_fea_ten.shape)
+            print(train_pt_fea_ten)
+            print("train_vox_ten: ", train_vox_ten.shape)
+            print(train_vox_ten)
+            print("point_label_tensor: ", point_label_tensor.shape)
+            print(point_label_tensor)
+            
             outputs = my_model(train_pt_fea_ten, train_vox_ten, train_batch_size)
             loss = lovasz_softmax(torch.nn.functional.softmax(outputs), point_label_tensor, ignore=0) + loss_func(
                 outputs, point_label_tensor)
