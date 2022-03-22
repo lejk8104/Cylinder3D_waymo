@@ -1,0 +1,84 @@
+# This file is covered by the LICENSE file in the root of this project.
+labels: 
+  0 : "TYPE_UNDEFINED"
+  1 : "TYPE_CAR"
+  2: "TYPE_TRUCK"
+  3: "TYPE_BUS"
+  4: "TYPE_OTHER_VEHICLE"
+  5: "TYPE_MOTORCYCLIST"
+  6: "TYPE_BICYCLIST"
+  7: "TYPE_PEDESTRIAN"
+  8: "TYPE_SIGN"
+  9: "TYPE_TRAFFIC_LIGHT"
+  10: "TYPE_POLE"
+  11: "TYPE_CONSTRUCTION_CONE"
+  12: "TYPE_BICYCLE"
+  13: "TYPE_MOTORCYCLE"
+  14: "TYPE_BUILDING"
+  15: "TYPE_VEGETATION"
+  16: "TYPE_TREE_TRUNK"
+  17: "TYPE_CURB"
+  18: "TYPE_ROAD"
+  19: "TYPE_LANE_MARKER"
+  20: "TYPE_OTHER_GROUND"
+  21: "TYPE_WALKABLE"
+  22: "TYPE_SIDEWALK"
+color_map: # bgr
+  0 : [0, 0, 0]
+  1 : [0, 0, 255]     #red
+  2: [245, 150, 100]  #deep blue
+  3: [245, 230, 100]  #sky blue
+  4: [250, 80, 100]   #ultramarin 군청색
+  5: [150, 60, 30]    #indgo 남색
+  6: [255, 0, 0]      #blue
+  7: [180, 30, 80]
+  8: [255, 0, 0]
+  9: [30, 30, 255]
+  10: [200, 40, 255]
+  11: [90, 30, 150]
+  12: [255, 0, 255]
+  13: [255, 150, 255]
+  14: [75, 0, 75]
+  15: [75, 0, 175]
+  16: [0, 200, 255]
+  17: [50, 120, 255]
+  18: [0, 150, 255]
+  19: [170, 255, 150]
+  20: [0, 175, 0]
+  21: [0, 60, 135]
+  22: [80, 240, 150]
+  # 80: [150, 240, 255]
+  # 81: [0, 0, 255]
+  # 99: [255, 255, 50]
+  # 252: [245, 150, 100]
+  # 256: [255, 0, 0]
+  # 253: [200, 40, 255]
+  # 254: [30, 30, 255]
+  # 255: [90, 30, 150]
+  # 257: [250, 80, 100]
+  # 258: [180, 30, 80]
+  # 259: [255, 0, 0]
+learning_map:
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 6
+  7: 7
+  8: 8
+  9: 9
+  10: 10
+  11: 11
+  12: 12
+  13: 13
+  14: 14
+  15: 15
+  16: 16
+  17: 17
+  18: 18
+  19: 19
+  20: 20
+  21: 21
+  22: 22
