@@ -77,7 +77,7 @@ class SemKITTI_waymo(data.Dataset):
             for file in files:
                 dataset = os.path.join(roots, file)
                 # print("waymo dataset :",dataset)
-                self.im_idx += absoluteFilePaths(dataset)
+                self.im_idx.append(absoluteFilePaths(dataset))
         print(self.im_idx)
 
     def __len__(self):
