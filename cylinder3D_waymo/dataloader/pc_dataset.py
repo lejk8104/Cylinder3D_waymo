@@ -78,6 +78,7 @@ class SemKITTI_waymo(data.Dataset):
                 dataset = os.path.join(roots, file)
                 # print("waymo dataset :",dataset)
                 self.im_idx += absoluteFilePaths(dataset)
+        print(self.im_idx)
 
     def __len__(self):
         'Denotes the total number of samples'
