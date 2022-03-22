@@ -112,6 +112,8 @@ class cylinder_dataset_waymo(data.Dataset):
 
         # process labels
         processed_label = np.ones(self.grid_size, dtype=np.uint8) * self.ignore_label
+        print("processed_label: ", processed_label.shape)
+        print(processed_label)
         label_voxel_pair = np.concatenate([grid_ind, labels], axis=1)
         label_voxel_pair = label_voxel_pair[np.lexsort((grid_ind[:, 0], grid_ind[:, 1], grid_ind[:, 2])), :]
         processed_label = nb_process_label(np.copy(processed_label), label_voxel_pair)
