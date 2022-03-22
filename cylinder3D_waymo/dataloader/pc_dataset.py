@@ -48,7 +48,7 @@ class SemKITTI_demo(data.Dataset):
         return len(self.im_idx)
 
     def __getitem__(self, index):
-        raw_data = np.fromfile(self.im_idx[index], dtype=np.float32).reshape((-1, 4))
+        raw_data = np.fromfile(self.im_idx[index], dtype=np.float32).reshape((-1, 3))
         if self.imageset == 'demo':
             annotated_data = np.expand_dims(np.zeros_like(raw_data[:, 0], dtype=int), axis=1)
         elif self.imageset == 'val':
