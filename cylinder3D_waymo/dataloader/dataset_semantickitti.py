@@ -19,7 +19,7 @@ REGISTERED_DATASET_CLASSES = {}
 
 def register_dataset(cls, name=None):
     global REGISTERED_DATASET_CLASSES
-    print("naeme:",name,"cls.name:",cls.__name__)
+    print("name:",name,"cls.name:",cls.__name__)
     if name is None:
         name = cls.__name__
     assert name not in REGISTERED_DATASET_CLASSES, f"exist class: {REGISTERED_DATASET_CLASSES}"
