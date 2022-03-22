@@ -112,10 +112,10 @@ class cylinder_dataset_waymo(data.Dataset):
 
         # process labels
         processed_label = np.ones(self.grid_size, dtype=np.uint8) * self.ignore_label
-        print("xyz_pol:",xyz_pol.shape)
-        print("labels: ",labels.shape)
+        # print("xyz_pol:",xyz_pol.shape)
+        # print("labels: ",labels.shape)
         # print(labels)
-        print("grid_ind: ",grid_ind.shape)
+        # print("grid_ind: ",grid_ind.shape)
         # print(grid_ind)
         label_voxel_pair = np.concatenate([grid_ind, labels], axis=1)
         label_voxel_pair = label_voxel_pair[np.lexsort((grid_ind[:, 0], grid_ind[:, 1], grid_ind[:, 2])), :]
