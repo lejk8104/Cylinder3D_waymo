@@ -29,13 +29,13 @@ dataset_params:
   fixed_volume_space: True
   label_mapping: "./config/label_mapping/waymo.yaml"    ##
   max_volume_space:
-    - 50          ##
+    - 76          ##
     - 3.1415926   ##
-    - 2           ##
+    - 6           ##
   min_volume_space:
-    - 0           ##
+    - -76          ##
     - -3.1415926  ##
-    - -4          ##
+    - -3          ##
 
 
 ###################

@@ -86,7 +86,7 @@ class SemKITTI_waymo(data.Dataset):
 
     def __getitem__(self, index):
         print("__getitem__:", self.im_idx[index])
-        raw_data = np.fromfile(self.im_idx[index], dtype=np.float32).reshape((-1, 3))
+        raw_data = np.fromfile(self.im_idx[index], dtype=np.float32).reshape((-1, 4))
         if self.imageset == 'test':     #?
             annotated_data = np.expand_dims(np.zeros_like(raw_data[:, 0], dtype=int), axis=1)
         else:
