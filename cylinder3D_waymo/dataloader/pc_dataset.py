@@ -72,11 +72,11 @@ class SemKITTI_waymo(data.Dataset):
         self.data_path = data_path
         self.imageset = imageset
         self.im_idx = []
-        print("path:", os.path.join(self.data_path,'pointcloud'))
+        # print("path:", os.path.join(self.data_path,'pointcloud'))
         for (roots, dirs, files) in os.walk(os.path.join(self.data_path,'pointcloud')):
             for file in files:
                 dataset = os.path.join(roots, file)
-                print("waymo dataset :",dataset)
+                # print("waymo dataset :",dataset)
                 self.im_idx += absoluteFilePaths(dataset)
 
     def __len__(self):
@@ -84,6 +84,7 @@ class SemKITTI_waymo(data.Dataset):
         return len(self.im_idx)
 
     def __getitem__(self, index):
+        print("__getitem__:", self.im_idx[index])
         raw_data = np.fromfile(self.im_idx[index], dtype=np.float32).reshape((-1, 4))
         if self.imageset == 'test':     #?
             annotated_data = np.expand_dims(np.zeros_like(raw_data[:, 0], dtype=int), axis=1)
