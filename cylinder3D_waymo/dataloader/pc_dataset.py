@@ -71,9 +71,11 @@ class SemKITTI_waymo(data.Dataset):
         self.data_path = data_path
         self.imageset = imageset
         self.im_idx = []
+        print("path:", os.path.join(self.data_path,'pointcloud'))
         for (roots, dirs, files) in os.walk(os.path.join(self.data_path,'pointcloud')):
             for file in files:
                 dataset = os.path.join(roots, file)
+                print("waymo dataset :",dataset)
                 self.im_idx += absoluteFilePaths(dataset)
 
     def __len__(self):
