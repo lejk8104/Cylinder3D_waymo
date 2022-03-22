@@ -53,6 +53,7 @@ def build(dataset_config,
         ignore_label=dataset_config["ignore_label"],
     )
     print("train_dataset:", train_dataset)
+    print("train_pt_dataset:", train_pt_dataset)
     train_dataset_loader = torch.utils.data.DataLoader(dataset=train_dataset,
                                                        batch_size=train_dataloader_config["batch_size"],
                                                        collate_fn=collate_fn_BEV,
